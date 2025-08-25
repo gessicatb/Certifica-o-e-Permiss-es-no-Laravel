@@ -43,3 +43,45 @@ O Laravel oferece diversas ferramentas e pacotes que facilitam a implementação
 - Spatie Laravel Permission (Gerenciamento de roles e permissões)
 - Laravel Fortify (Autenticação básica)
 - Laravel Breeze (Autenticação simples)
+
+# Aplicação
+
+1. **Cadastro de posts**  
+   - Cada post pertence a um usuário (coluna `user_id`).  
+   - Apenas o dono pode editar ou excluir.  
+
+2. **Policies no Laravel**  
+   - Centralizam as regras de autorização.  
+   - Exemplo: só o dono do post pode atualizá-lo (`update`).  
+
+3. **Uso no Controller**  
+   - Autorização feita com `$this->authorize('action', $model)`.  
+   - Exemplo:  
+     ```php
+     $this->authorize('update', $post);
+     ```  
+
+4. **Uso nas Views (Blade)**  
+   - Exibição condicional de botões com `@can` e `@cannot`.  
+   - Exemplo:  
+     ```blade
+     @can('update', $post)
+         <a href="{{ route('posts.edit', $post) }}">Editar</a>
+     @endcan
+     ```
+
+5. **Ações suportadas na Policy**  
+   - `view` → qualquer usuário autenticado pode visualizar.  
+   - `create` → apenas admin pode criar.  
+   - `update` → apenas o dono do post pode editar.  
+   - `delete` → apenas o dono pode excluir.  
+
+
+
+### 📋 Pré-requisitos
+
+1. PHP 8.x — [Download PHP](https://www.php.net/downloads)  
+2. Composer — [Download Composer](https://getcomposer.org/download/)  
+3. Laravel 10.x — [Documentação Laravel](https://laravel.com/docs/10.x)  
+4. Banco de dados MySQL ou PostgreSQL  
+
