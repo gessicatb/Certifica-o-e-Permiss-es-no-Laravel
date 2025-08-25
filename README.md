@@ -1,10 +1,10 @@
 # Certificação e Permissões no Laravel
 
-1. Introdução: 
+## 1. Introdução
 Este documento tem como objetivo fornecer um estudo detalhado sobre certificação e permissões no Laravel, explorando os aspectos relacionados à autenticação, autorização e certificação de identidade. Além disso, serão abordados pacotes utilizados, boas práticas de segurança e a integração de sistemas de certificação.
-2. Entendimento sobre Autenticação e Autorização no Laravel
+## 2. Entendimento sobre Autenticação e Autorização no Laravel
 O Laravel oferece suporte completo para autenticação e autorização de usuários em suas aplicações. O processo de autenticação envolve a verificação de identidade do usuário, enquanto a autorização define o que cada usuário pode ou não acessar dentro do sistema. O Laravel possui funcionalidades prontas para ambos os processos, com o uso de pacotes como Laravel Breeze, Laravel Jetstream, Laravel Fortify, entre outros.
-3. Implementação de Sistema de Permissões
+## 3. Implementação de Sistema de Permissões
 O Laravel permite a implementação de um sistema de permissões através de pacotes como Spatie Laravel Permission. Este pacote facilita a definição de 'roles' (funções) e 'permissions' (permissões) e sua atribuição a usuários.Exemplo de implementação de roles e permissões:
 // Definir uma role
 $user->assignRole('admin');
@@ -13,7 +13,7 @@ $user->assignRole('admin');
 $user->givePermissionTo('edit posts');
 
 
-4. Integração de Certificação: 
+4. Integração de Certificação
 A certificação de identidade no Laravel pode ser realizada por meio de OAuth2, JWT ou sistemas SAML. A autenticação via OAuth2 é implementada com o uso do pacote Laravel Passport, enquanto o Laravel Sanctum fornece uma solução mais simples para autenticação via tokens. Esses métodos permitem a integração com sistemas externos e garantem que os dados do usuário estejam protegidos.
 5. Análise de Certificação de Identidade
 A certificação de identidade pode ser realizada com OAuth2, utilizando provedores como Google, Facebook, ou sistemas corporativos. A integração de sistemas externos através de autenticação via tokens JWT também é uma prática comum em sistemas Laravel, garantindo segurança e escalabilidade.
