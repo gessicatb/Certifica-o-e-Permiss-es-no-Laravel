@@ -1,4 +1,4 @@
-# Certifica-o-e-Permiss-es-no-Laravel
+# Certificação e Permissões no Laravel
 
 1. Introdução
 Este documento tem como objetivo fornecer um estudo detalhado sobre certificação e permissões no Laravel, explorando os aspectos relacionados à autenticação, autorização e certificação de identidade. Além disso, serão abordados pacotes utilizados, boas práticas de segurança e a integração de sistemas de certificação.
